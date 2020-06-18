@@ -4,41 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web Studio - Портфолио</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.6.0/modern-normalize.min.css"
-    />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/portfolio.min.css" />
   </head>
   <body class="page">
     <!-- Page header -->
     <header class="page-header">
       <div class="container">
-        <a href="./index.html" class="logo link"
+        <a href="./index.html" class="logo"
           ><span class="web">Web</span> <span class="studio">Studio</span></a
         >
         <nav>
-          <ul class="nav list">
+          <ul class="nav">
             <li class="item-nav">
-              <a href="./index.html" class="nav-item link">Студия</a>
+              <a href="./index.html" class="nav-item">Студия</a>
             </li>
             <li class="item-nav">
-              <a href="./portfolio.html" class="nav-item link current"
-                >Портфолио</a
-              >
+              <a href="./portfolio.html" class="nav-item current">Портфолио</a>
             </li>
             <li class="item-nav">
-              <a href="" class="nav-item link">Контакты</a>
+              <a href="" class="nav-item">Контакты</a>
             </li>
           </ul>
         </nav>
-        <ul class="nav-contacts list">
+        <ul class="nav-contacts">
           <li class="item-nav-contacts">
-            <a href="mailto:info@devstudio.com" class="nav-contacts-item link">
+            <a href="mailto:info@devstudio.com" class="nav-contacts-item">
               <svg class="icon-envelope" width="16" height="11.2">
                 <use href="./images/svg/sprite.svg#icon-envelope"></use>
               </svg>
@@ -46,7 +36,7 @@
             </a>
           </li>
           <li class="item-nav-contacts">
-            <a href="tel:+380961111111" class="nav-contacts-item link">
+            <a href="tel:+380961111111" class="nav-contacts-item">
               <svg class="icon-smartphone" width="10" height="14.94">
                 <use href="./images/svg/sprite.svg#icon-smartphone"></use>
               </svg>
@@ -60,8 +50,8 @@
     <main class="portfolio">
       <!-- Portfolio filter -->
       <div class="container">
-        <h1 class="title visually-hidden">Примеры работ</h1>
-        <ul class="filter list">
+        <h1 class="portfolio-title">Примеры работ</h1>
+        <ul class="filter">
           <li class="filter-item">
             <button type="button" class="filter-button">Все</button>
           </li>
@@ -85,9 +75,9 @@
           </li>
         </ul>
         <!-- Examples -->
-        <ul class="examples list">
+        <ul class="examples">
           <li class="examples-item">
-            <a href="" class="link">
+            <a href="" class="examples-link">
               <div class="examples-thumb">
                 <img
                   src="./images/portfolio/technohriak.jpg"
@@ -109,7 +99,7 @@
             </a>
           </li>
           <li class="examples-item">
-            <a href="" class="link">
+            <a href="" class="examples-link">
               <div class="examples-thumb">
                 <img
                   src="./images/portfolio/neworlean.jpg"
@@ -132,7 +122,7 @@
             </a>
           </li>
           <li class="examples-item">
-            <a href="" class="link">
+            <a href="" class="examples-link">
               <div class="examples-thumb">
                 <img
                   src="./images/portfolio/seafood.jpg"
@@ -154,7 +144,7 @@
             </a>
           </li>
           <li class="examples-item">
-            <a href="" class="link">
+            <a href="" class="examples-link">
               <div class="examples-thumb">
                 <img
                   src="./images/portfolio/prime.jpg"
@@ -176,7 +166,7 @@
             </a>
           </li>
           <li class="examples-item">
-            <a href="" class="link">
+            <a href="" class="examples-link">
               <div class="examples-thumb">
                 <img
                   src="./images/portfolio/boxes.jpg"
@@ -197,7 +187,7 @@
             </a>
           </li>
           <li class="examples-item">
-            <a href="" class="link">
+            <a href="" class="examples-link">
               <div class="examples-thumb">
                 <img
                   src="./images/portfolio/inspiration.jpg"
@@ -219,7 +209,7 @@
             </a>
           </li>
           <li class="examples-item">
-            <a href="" class="link">
+            <a href="" class="examples-link">
               <div class="examples-thumb">
                 <img
                   src="./images/portfolio/limited.jpg"
@@ -241,7 +231,7 @@
             </a>
           </li>
           <li class="examples-item">
-            <a href="" class="link">
+            <a href="" class="examples-link">
               <div class="examples-thumb">
                 <img
                   src="./images/portfolio/lab.jpg"
@@ -262,7 +252,7 @@
             </a>
           </li>
           <li class="examples-item">
-            <a href="" class="link">
+            <a href="" class="examples-link">
               <div class="examples-thumb">
                 <img
                   src="./images/portfolio/growing.jpg"
@@ -290,47 +280,45 @@
     <footer class="footer">
       <div class="container">
         <div>
-          <a href="./index.html" class="logo-footer link"
+          <a href="./index.html" class="logo-footer"
             ><span class="web">Web</span> <span class="studio">Studio</span></a
           >
           <!-- Contacts -->
           <address class="address">
-            <a href="" class="place link">г. Киев, пр-т Леси Украинки, 26</a>
-            <a href="mailto:info@example.com" class="contacts link"
+            <a href="" class="place">г. Киев, пр-т Леси Украинки, 26</a>
+            <a href="mailto:info@example.com" class="contacts"
               >info@example.com</a
             >
-            <a href="tel:+380991111111" class="contacts link"
-              >+38 099 111 11 11</a
-            >
+            <a href="tel:+380991111111" class="contacts">+38 099 111 11 11</a>
           </address>
         </div>
         <!-- Social networks -->
         <div class="social">
           <b class="action">Присоединяйтесь</b>
-          <ul class="list">
+          <ul class="social-list">
             <li>
-              <a href="" class="link" aria-label="Ссылка на Instagram">
+              <a href="" class="instagram" aria-label="Ссылка на Instagram">
                 <svg class="icon-instagram" width="20" height="20">
                   <use href="./images/svg/sprite.svg#icon-instagram"></use>
                 </svg>
               </a>
             </li>
             <li>
-              <a href="" class="link" aria-label="Ссылка на Twitter">
+              <a href="" class="twitter" aria-label="Ссылка на Twitter">
                 <svg class="icon-twitter" width="20" height="20">
                   <use href="./images/svg/sprite.svg#icon-twitter"></use>
                 </svg>
               </a>
             </li>
             <li>
-              <a href="" class="link" aria-label="Ссылка на Facebook">
+              <a href="" class="facebook" aria-label="Ссылка на Facebook">
                 <svg class="icon-facebook" width="20" height="20">
                   <use href="./images/svg/sprite.svg#icon-facebook"></use>
                 </svg>
               </a>
             </li>
             <li>
-              <a href="" class="link" aria-label="Ссылка на LinkedIn">
+              <a href="" class="linkedin" aria-label="Ссылка на LinkedIn">
                 <svg class="icon-linkedin" width="20" height="20">
                   <use href="./images/svg/sprite.svg#icon-linkedin"></use>
                 </svg>
@@ -361,8 +349,6 @@
           </form>
         </div>
       </div>
-      <!-- Copyright -->
-      <p class="copyright">2020 | Developed by GoIT Students</p>
     </footer>
   </body>
 </html>
