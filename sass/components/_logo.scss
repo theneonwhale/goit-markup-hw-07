@@ -1,0 +1,39 @@
+.logo,
+.logo-footer {
+  @extend %link;
+  display: inline-block;
+
+  font-family: Raleway, sans-serif;
+  letter-spacing: 0.03em;
+}
+
+.logo {
+  font-size: 26px;
+  line-height: 1.19;
+
+  & .web {
+    color: $logo-web-color;
+  }
+
+  & .studio {
+    color: $primary-black-color;
+  }
+}
+
+.logo-footer {
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  font-size: 22px;
+  line-height: 1.18;
+
+  & .web {
+    color: $logo-web-color;
+  }
+
+  & .studio {
+    color: $primary-white-color;
+  }
+}
+
+

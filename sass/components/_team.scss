@@ -1,0 +1,107 @@
+.team {
+  background-color: $bg-team-color;
+}
+
+.team .container {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.team .title {
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+.team-list {
+  @extend %list;
+  display: flex;
+}
+
+.team-item {
+  width: calc((100% - (30px * 3)) / 4);
+  margin-right: 30px;
+  margin-bottom: 30px;
+
+  background-color: $bg-employee-color;
+  box-shadow: $team-item-shadow;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  overflow: hidden;
+}
+
+.team-item:nth-child(4n) {
+  margin-right: 0;
+}
+
+.team-item:nth-child(-n + 4) {
+  margin-bottom: 0;
+}
+
+.team-content-list {
+  @extend %list;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+}
+
+.team-content {
+  padding-top: 30px;
+  padding-bottom: 24px;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.team-social {
+  .instagram,
+  .twitter,
+  .facebook,
+  .linkedin {
+    @extend %link;
+    @include flex-center();
+    width: 44px;
+    height: 44px;
+
+    background-color: $bg-team-social-color;
+    color: $team-social-icon-color;
+    border-radius: 50%;
+
+    transition: background-color 250ms $timing-function,
+      color 250ms $timing-function, transform 250ms $timing-function;
+  }
+}
+
+.icon-instagram,
+.icon-twitter,
+.icon-facebook,
+.icon-linkedin {
+  fill: currentColor;
+}
+
+@each $iconName in $icons {
+  #{$iconName}:hover,
+  #{$iconName}:focus {
+    background-color: $accent-color;
+    color: $primary-white-color;
+  }
+}
+
+.team .item {
+  margin-top: 0;
+  margin-bottom: 10px;
+
+  color: $heading-text-color;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+}
+
+.team .text {
+  margin-top: 0;
+  margin-bottom: 16px;
+
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+}
