@@ -9,16 +9,16 @@
 
   opacity: 1;
   transition: opacity 250ms $timing-function;
-}
 
-.backdrop.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-}
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
 
-.backdrop.is-hidden .modal {
-  opacity: 0;
-  transform: translate(-50%, -50%) scale(0.7);
+  &.is-hidden .modal {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.7);
+  }
 }
 
 .modal {
@@ -33,9 +33,8 @@
 
   background-color: $bg-modal-color;
   color: $primary-black-color;
+  @include font-size(20px, 1.15);
   font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
   box-shadow: $modal-shadow;
   border-radius: 4px;
 
@@ -43,54 +42,64 @@
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms $timing-function, opacity 250ms $timing-function;
-}
 
-.modal-title {
-  display: block;
-  margin-bottom: 28px;
-  text-align: center;
+  &-title {
+    display: block;
+    margin-bottom: 28px;
+    text-align: center;
+  }
 }
 
 .form {
   @include flex-center();
   flex-direction: column;
   color: $primary-text-color;
-}
 
-.form-field {
-  position: relative;
-  width: 448px;
-  margin-bottom: 28px;
+  &-field {
+    position: relative;
+    width: 448px;
+    margin-bottom: 28px;
 
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.01em;
-}
+    @include font-size(14px, 1.14);
+    font-weight: 400;
+    letter-spacing: 0.01em;
+  }
 
-.form-input {
-  width: 100%;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  padding-left: 42px;
-  padding-right: 16px;
-  border: 1px solid $form-border-color;
-  border-radius: 4px;
-  transition: border-color 250ms $timing-function;
-}
+  &-input {
+    width: 100%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 42px;
+    padding-right: 16px;
+    border: 1px solid $form-border-color;
+    border-radius: 4px;
+    transition: border-color 250ms $timing-function;
+  }
 
-.form-input:focus {
-  border-color: $accent-color;
-  outline-color: $accent-color;
-}
+  &-input:focus {
+    border-color: $accent-color;
+    outline-color: $accent-color;
+  }
 
-.form-label {
-  position: absolute;
-  top: 50%;
-  left: 42px;
-  color: $primary-text-color;
-  transform: translateY(-50%);
-  transition: transform 250ms $timing-function, color 250ms $timing-function;
+  &-label {
+    position: absolute;
+    top: 50%;
+    left: 42px;
+    color: $primary-text-color;
+    transform: translateY(-50%);
+    transition: transform 250ms $timing-function, color 250ms $timing-function;
+  }
+
+  & .button {
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  & .button:hover {
+    color: $btn-text-color;
+    background-color: $form-btn-send-color;
+  }
 }
 
 .icon-modal {
@@ -124,9 +133,8 @@
   width: 448px;
   margin-bottom: 20px;
 
+  @include font-size(14px, 1.14);
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.14;
   letter-spacing: 0.01em;
 }
 
@@ -164,10 +172,18 @@
 .policy {
   @include flex-center();
   margin-bottom: 30px;
+  @include font-size(14px, 1.71);
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
   letter-spacing: 0.03em;
+
+  &-agreement {
+    color: $accent-color;
+  }
+
+  &-agreement:active,
+  &-agreement:visited {
+    color: $visited-link-color;
+  }
 }
 
 .checkbox {
@@ -200,21 +216,6 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-origin: border-box;
-}
-
-.policy-agreement {
-  color: $accent-color;
-}
-
-.policy-agreement:active,
-.policy-agreement:visited {
-  color: $visited-link-color;
-}
-
-.form .button {
-  max-width: 200px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .button-close {

@@ -3,3 +3,8 @@
   align-items: $type-align;
   justify-content: $type-justify;
 }
+
+@mixin font-size($size, $height) {
+  font-size: $size;
+  line-height: $height;
+}
